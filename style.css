@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.content .temp {
+    font-family: 'Prata', serif;
+    transform: translate();
+    filter: opacity(1);
+    animation: appear 2s ease-in-out;
+    text-align: center;
+}
+
+.content .details {
+    font-family: 'Smooch Sans', sans-serif;
+    font-weight: 100;
+}
+
+.content .credits {
+    font-family: 'Smooch Sans', sans-serif;
+    position: absolute;
+    right: 3vh;
+    bottom: 3vh;
+    font-size: 1.4em;
+}
+
+.content .exe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20vh;
+    width: 7vh;
+    height: 7vh;
+    color: white;
+    background: none;
+    border: 1px solid white;
+    border-radius: 50%;
+    transform: translate();
+    filter: opacity(1);
+    animation: appear2 2s ease-in-out;
+}
+
+.content .exe:hover {
+    background-color: white;
+    color: black;
+    transition: all .2s ease-in-out;
+    transform: scale(1.2);
+    border: none;
+    font-size: 1.4em;
+}
+
+.content .exe:active {
+    transform: scale(.8);
+    font-size: 0em;
+}
+
+@keyframes appear {
+    from {
+        filter: opacity(0);
+        transform: translateY(-55vh);
+    } to {
+        filter: opacity(1);
+        transform: translateY(0);
+    }
+}
+
+@keyframes appear2 {
+    from {
+        filter: opacity(0);
+        transform: translateY(30vh);
+    } to {
+        filter: opacity(1);
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .content .temp {
+        font-size: 1.5em;
+    }
+}
+
+
+
